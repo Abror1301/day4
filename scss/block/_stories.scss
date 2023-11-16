@@ -1,0 +1,126 @@
+.stories {
+  padding-top: 140px;
+  padding-bottom: 150px;
+  background-image: url(../img/stories-bg1.svg), url(../img/stories-bg2.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0, right bottom -100px;
+}
+
+.stories_title {
+  color: #FFF;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  max-width: 930px;
+  margin-bottom: 95px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stories_span {
+  color: #79C8C7;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.stories_item {
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url(../img/stories-begore.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 56px;
+    width: 67px;
+    left: 50%;
+    margin-left: -33.5px;
+    top: -36px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 67px;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  &:nth-child(1)::after {
+    background-image: url(/img/stories-job1.svg);
+  }
+
+  &:nth-child(2)::after {
+    background-image: url(/img/stories-job2.svg);
+  }
+
+  &:nth-child(3)::after {
+    background-image: url(/img/stories-job3.svg);
+  }
+
+  p {
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  h3 {
+    color: #79C8C7;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+}
+
+.stories_list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media screen and (max-width:1132px) {
+  .stories_list {
+    flex-wrap: wrap;
+  }
+
+  .stories_title {
+    margin-left: auto;
+    margin-right: auto
+  }
+}
+
+// @media screen and (max-width:768px){
+//   .stories_item{
+//     max-width: 573px;
+//   }
+// }
+@media screen and (max-width:769px) {
+  .stories_title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .stories_item{
+    max-width: 573px;
+  }
+  .stories_item::after {
+    margin-bottom: 48px;
+  }
+  .stories{
+    padding-bottom: 100px;
+  }
+
+}
+@media screen and (max-width:769px){
+ 
+}

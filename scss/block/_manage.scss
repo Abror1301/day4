@@ -1,0 +1,121 @@
+.manage {
+  padding-top: 198px;
+  padding-bottom: 140px;
+  background-color: #012F34;
+  background-image:url(../img/manage-bg.svg);
+  background-repeat:no-repeat;
+  background-position: right -100px bottom;
+}
+.manage_conteiner{
+  display: flex;
+  justify-content: space-between;
+}
+.manage_title {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  max-width: 445px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 4px;
+    flex-shrink: 0;
+    background-color: #F67E7E;
+    top: -54px;
+  }
+}
+
+.manage_card {
+  max-width: 445px;
+}
+
+.manage_sub_title {
+  color: #F67E7E;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+
+.manage_cup {
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 32px;
+}
+
+.manage_item{
+  display: flex;
+  gap: 23px;
+  &::before {
+    content: "";
+    background-repeat: no-repeat;
+    width: 72px;
+    height: 72px;
+    display: block;
+    gap: 23px;
+  }
+} 
+.manage_item:nth-child(1)::before{
+  background-image: url(../img/manage-im1.svg);
+}
+.manage_item:nth-child(2)::before{
+  background-image: url(../img/manage-im2.svg);
+}
+.manage_item:nth-child(3)::before{
+  background-image: url(../img/manage-im3.svg);
+}
+@media screen and (max-width:1270px) {
+  .manage {
+    padding-bottom: 68px;
+    background-position: right -100px top;
+  }
+}
+@media screen and (max-width:1053px) {
+  .manage_conteiner{
+    flex-direction: column;
+    max-width: 573px;
+  }
+  .manage_title{
+    font-size: 32px;
+    line-height: 32px;
+    max-width: 445px;
+  }
+  .manage_list{
+    margin-top: 64px;
+    margin-left: -7px;
+  }
+}
+@media screen and (max-width:575px) {
+  .manage_conteiner{
+    max-width: 573px;
+  }
+  .manage_title{
+    margin-right: 32px;
+  }
+  .manage_item{
+    flex-direction: column;
+  }
+  .manage_list{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .manage_item::before{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .manage_sub_title{
+    margin-bottom: 8px;
+  }
+  .manage_cup{
+    margin-bottom: 48px;
+  }
+
+}
